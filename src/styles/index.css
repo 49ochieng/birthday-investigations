@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #17140f;
+  background-image:
+    linear-gradient(rgba(23, 20, 15, 0.94), rgba(23, 20, 15, 0.94)),
+    repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.035) 0px, rgba(212, 175, 55, 0.035) 2px, transparent 2px, transparent 14px);
+  min-height: 100vh;
+}
+
+.file-card {
+  background-color: #f3ead9;
+  color: #1c1a17;
+  border: 1px solid #cbb583;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.confidential-tab {
+  background: #a0272d;
+  color: #f8f1e0;
+  letter-spacing: 0.08em;
+}
+
+.stamp {
+  border: 3px solid currentColor;
+  border-radius: 0.4rem;
+  transform: rotate(-12deg);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.sticky-note {
+  background: #f5e07a;
+  color: #4a3d05;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.sticky-note:nth-of-type(3n) {
+  transform: rotate(2deg);
+}
+.sticky-note:nth-of-type(3n + 1) {
+  transform: rotate(-3deg);
+}
+.sticky-note:nth-of-type(3n + 2) {
+  transform: rotate(1.5deg);
+}
+
+.redacted {
+  background: #17140f;
+  color: transparent;
+  border-radius: 2px;
+  user-select: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #d4af37;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #d4af37;
+  color: #1c1a17;
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-only {
+    display: block !important;
+  }
+  #print-certificate,
+  #print-certificate * {
+    visibility: visible;
+  }
+  #print-certificate {
+    position: absolute;
+    inset: 0;
+  }
+}
