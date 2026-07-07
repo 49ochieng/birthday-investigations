@@ -14,3 +14,7 @@ api/local.settings.json
 # Private personal photos, not for public repo
 Sammy Pictures/
 Martin Pictures/
+public/assets/sammy/*.jpg
+public/assets/sammy/*.jpeg
+public/assets/martin/*.jpg
+public/assets/martin/*.jpeg
