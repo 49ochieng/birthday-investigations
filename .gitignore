@@ -10,3 +10,7 @@ dist-ssr
 api/node_modules
 api/dist
 api/local.settings.json
+
+# Private personal photos, not for public repo
+Sammy Pictures/
+Martin Pictures/
