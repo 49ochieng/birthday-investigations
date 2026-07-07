@@ -41,6 +41,8 @@ If a listed photo file is missing, the page shows a stylish placeholder card ins
 
 See the `README.md` files inside each `public/assets/*` folder for more detail.
 
+This repository does not include anyone's actual photos. `Sammy Pictures/`, `Martin Pictures/`, and the image files under `public/assets/sammy/` and `public/assets/martin/` are gitignored on purpose, since those are private. Drop your own images into those folders locally to populate the gallery.
+
 ## Replacing GIFs
 
 GIFs are configured as plain data, not bundled files. Edit the `gifs` array in:
